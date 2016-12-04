@@ -1,0 +1,75 @@
+.home-view
+	.hero
+		@extend .flex-xy
+
+		height: 100vh
+		background: url(/app/assets/img/paper-fibers-1920x1080.png) center center
+		padding: 10%
+		position: relative
+
+		.hero-light
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			background: -webkit-radial-gradient(ellipse farthest-side, #ffffff, #828590)
+			opacity: 0.3
+
+		.left-panel
+			flex: 0 0 30%
+			border-right: 1px solid #9b9b9d
+			height: 40%
+
+			.logo
+				font-family: "danube", sans-serif
+				text-align: right
+				font-size: 100px
+				display: flex
+				height: 100%
+				justify-content: flex-end
+				align-items: center
+				padding-right: 5vw
+				background: -webkit-radial-gradient(right center, ellipse farthest-side, rgb(255, 110, 0), rgba(255, 153, 0, 0.88))
+				-webkit-background-clip: text
+				-moz-background-clip: text
+				-webkit-text-fill-color: rgba(255, 183, 0, 0.55)
+				text-shadow: inset 1px 1px black
+				color: transparent
+				text-shadow: rgb(255, 255, 255) -2px 1px 3px
+
+		.right-panel
+			flex: 0 0 70%
+			height: 40%
+
+			.textbox
+				display: flex
+				flex-direction: column
+				justify-content: center
+				height: 100%
+				padding-left: 5vw
+
+				.textbox-name
+					+syncopate
+
+					letter-spacing: 5px
+					font-weight: 300
+					font-size: 60px
+					padding-bottom: 10px
+					background: -webkit-radial-gradient(20% center, circle, #b9b9b9, #555)
+					-webkit-background-clip: text
+					-moz-background-clip: text
+					-webkit-text-fill-color: transparent
+
+				.textbox-description
+					+roboto
+
+					display: flex
+					align-items: center
+					font-weight: 100
+					font-size: 23px
+					letter-spacing: 5px
+					background: -webkit-radial-gradient(20% center, circle, #a7a7a7, #585858)
+					-webkit-background-clip: text
+					-moz-background-clip: text
+					-webkit-text-fill-color: transparent

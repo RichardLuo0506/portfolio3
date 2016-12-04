@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Richard Luo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link rel="stylesheet" href="/app/assets/css/app.css">
+    <!-- favicon -->
+    <!-- <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" /> -->
+</head>
+
+<body ng-app="App" ng-controller="core as core">
+    <div class="core" ng-controller="core">
+        <div class="menu-toggle" ng-click="core.menuIsOpen = true" ng-class="{'invis': core.menuIsOpen}"><i class="material-icons">menu</i></div>
+        <div class="menu-wrapper">
+            <nav class="menu-container">
+                <div class="menu-link" ng-class="{'visible': core.menuIsOpen}">Home</div>
+                <div class="menu-link" ng-class="{'visible': core.menuIsOpen}">About</div>
+                <div class="menu-link" ng-class="{'visible': core.menuIsOpen}">Portfolio</div>
+                <div class="menu-link" ng-class="{'visible': core.menuIsOpen}">Contact</div>
+            </nav>
+        </div>
+        <div class="view-wrapper" ng-class="{'rotated': core.menuIsOpen}">
+            <div class="view-overlay" ng-class="{'lighten': core.menuIsOpen}" ng-click="core.menuIsOpen = false"></div>
+            <div ui-view ng-cloak></div>
+        </div>
+    </div>
+    <!-- Dependencies -->
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!-- AngularJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular.min.js"></script>
+    <!-- UI Router -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
+    <!-- ngAnimate -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular-animate.min.js"></script>
+    <!-- Main App -->
+    <script src="/app/app.module.js"></script>
+    <script src="/app/app.routes.js"></script>
+    <script src="/app/core.controller.js"></script>
+    <script src="/app/home/home.controller.js"></script>
+    <script src="/app/contact/contact.controller.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+@import kurisutiiina/kurisutiiina
+@import config
+@import home
+
+html, body
+	height: 100%
+	padding: 0
+	margin: 0
+
+.core
+	position: relative
+
+.view-wrapper
+	transition: 500ms $ease-natural
+	-webkit-transform: perspective(0) translateZ(0) rotateY(0) translateX(0)
+	transform: perspective(0) translateZ(0) rotateY(0) translateX(0)
+
+.view-overlay
+	position: fixed
+	transition: 500ms $ease-natural
+	background: white
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	z-index: 10
+	pointer-events: none
+	opacity: 0
+
+	&.lighten
+		opacity: 0.5
+		pointer-events: initial
+
+		&:hover
+			cursor: pointer
+			opacity: 0
+
+.view-container
+	min-height: 100vh
+
+.menu-toggle
+	display: inline-block
+	position: fixed
+	top: 20px
+	right: 20px
+	z-index: 100
+	transition: 200ms $ease-natural
+
+	i
+		font-size: 40px
+		color: rgba(0, 0, 0, 0.3)
+		transition: 200ms $ease-natural
+
+	&:hover i
+		cursor: pointer
+		color: rgba(0, 0, 0, 0.7)
+
+	&.invis
+		opacity: 0
+
+.menu-wrapper
+	position: fixed
+	background: #ff8c00
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	z-index: -1
+
+	.menu-container
+		position: absolute
+		height: auto
+		font-size: 2em
+		top: 50%
+		-webkit-transform: translateY(-50%)
+		transform: translateY(-50%)
+		-webkit-transform-style: preserve-3d
+		transform-style: preserve-3d
+		left: 25%
+
+		.menu-link
+			+lato
+
+			opacity: 0
+			-webkit-transform: translateX(-350px) translateZ(-1000px)
+			transform: translateX(-350px) translateZ(-1000px)
+			transition: 500ms $ease-natural
+			white-space: nowrap
+			font-weight: 300
+			margin: 0 0 30px 0
+			margin: 0
+			color: #fff
+			-webkit-transform-style: preserve-3d
+			transform-style: preserve-3d
+
+			&.roboto
+				+roboto
+
+			$menu-delay: 40ms
+
+			&:nth-child(2)
+				transition-delay: 40ms + $menu-delay
+
+			&:nth-child(3)
+				transition-delay: 80ms + $menu-delay
+
+			&:nth-child(4)
+				transition-delay: 120ms + $menu-delay
+
+			&:nth-child(5)
+				transition-delay: 160ms + $menu-delay
+
+			&:nth-child(6)
+				transition-delay: 0.2s + $menu-delay
+
+			&.visible
+				opacity: 1
+				-webkit-transform: translateX(0) translateZ(0)
+				margin: 0 0 30px 0
+				transform: translateX(0) translateZ(0)
+				white-space: nowrap
+				font-weight: 300
+				margin: 0 0 30px 0
+				color: #fff
+				-webkit-transform-style: preserve-3d
+				transform-style: preserve-3d
+
+.rotated
+	-webkit-transform: perspective(1800px) translateZ(-1300px) rotateY(-35deg) translateX(-20%)
+	transform: perspective(1800px) translateZ(-1300px) rotateY(-35deg) translateX(-20%)
+	-webkit-transform-origin: 100% 50%
+	transform-origin: 100% 50%
