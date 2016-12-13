@@ -465,7 +465,7 @@ h6 {
     font-size: 32px;
     font-weight: 900;
     text-align: center;
-    border-bottom: 1px solid #545ab3;
+    border-bottom: 1px solid #4060ae;
     padding-bottom: 8px;
     margin-bottom: 0;
     line-height: 1;
@@ -473,17 +473,17 @@ h6 {
     @media screen and (min-width: 768px) and (max-width: 991px) {
       .home-view .hero h1 {
         font-size: 60px;
-        border-bottom: 2px solid #545ab3;
+        border-bottom: 2px solid #4060ae;
         padding-bottom: 12px; } }
     @media screen and (min-width: 992px) and (max-width: 1199px) {
       .home-view .hero h1 {
         font-size: 80px;
-        border-bottom: 3px solid #545ab3;
+        border-bottom: 3px solid #4060ae;
         padding-bottom: 14px; } }
     @media screen and (min-width: 1200px) {
       .home-view .hero h1 {
         font-size: 120px;
-        border-bottom: 4px solid #545ab3;
+        border-bottom: 4px solid #4060ae;
         padding-bottom: 16px; } }
   .home-view .hero h2 {
     z-index: 2;
@@ -493,7 +493,7 @@ h6 {
     margin-top: 10px;
     margin-bottom: 0;
     line-height: 1;
-    color: #545ab3; }
+    color: #4060ae; }
     @media screen and (min-width: 768px) and (max-width: 991px) {
       .home-view .hero h2 {
         font-size: 24px;
@@ -508,7 +508,7 @@ h6 {
         font-weight: bold;
         margin-top: 16px; } }
     .home-view .hero h2 span {
-      color: #737df5; }
+      color: #5886ee; }
   .home-view .hero .mouse-icon {
     z-index: 2;
     position: absolute;
@@ -531,7 +531,7 @@ h6 {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #30357b;
+    background-color: #223b70;
     z-index: 1;
     opacity: 0.7; }
 .home-view .mission {
@@ -760,11 +760,11 @@ body.fixed {
   transition: 200ms cubic-bezier(0.4, 0, 0.2, 1); }
   .menu-toggle i {
     font-size: 40px;
-    color: #737df5;
+    color: #5886ee;
     transition: 200ms cubic-bezier(0.4, 0, 0.2, 1); }
   .menu-toggle:hover i {
     cursor: pointer;
-    color: #b8bdff; }
+    color: #8fadf1; }
   .menu-toggle.invis {
     opacity: 0; }
 

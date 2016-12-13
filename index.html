@@ -12,19 +12,19 @@
 
 <body ng-app="App" ng-controller="core as core" ng-class="{'fixed': core.menuIsOpen}">
     <div class="core" ng-controller="core">
-        <div class="menu-toggle" ng-click="core.toggleMenu()" ng-class="{'invis': core.menuIsOpen}"><i class="material-icons">menu</i></div>
+        <div class="menu-toggle" ng-click="core.toggleMenu(true)" ng-class="{'invis': core.menuIsOpen}"><i class="material-icons">menu</i></div>
         <div class="menu-wrapper" ng-class="{'visible': core.menuIsOpen}">
             <nav class="menu-container">
-                <div class="menu-link" ng-click="core.menuIsOpen = false" ui-sref="home" ng-class="{'visible': core.menuIsOpen}">Home</div>
-                <div class="menu-link" ng-click="core.menuIsOpen = false" ui-sref="about" ng-class="{'visible': core.menuIsOpen}">About</div>
-                <div class="menu-link" ng-click="core.menuIsOpen = false" ui-sref="portfolio" ng-class="{'visible': core.menuIsOpen}">Portfolio</div>
-                <div class="menu-link" ng-click="core.menuIsOpen = false" ui-sref="contact" ng-class="{'visible': core.menuIsOpen}">Contact</div>
+                <div class="menu-link" ng-click="core.toggleMenu(false)" ui-sref="home" ng-class="{'visible': core.menuIsOpen}">Home</div>
+                <div class="menu-link" ng-click="core.toggleMenu(false)" ui-sref="about" ng-class="{'visible': core.menuIsOpen}">About</div>
+                <div class="menu-link" ng-click="core.toggleMenu(false)" ui-sref="portfolio" ng-class="{'visible': core.menuIsOpen}">Portfolio</div>
+                <div class="menu-link" ng-click="core.toggleMenu(false)" ui-sref="contact" ng-class="{'visible': core.menuIsOpen}">Contact</div>
             </nav>
         </div>
         <nav class="alt"></nav>
         <div class="decoration"></div>
         <div class="view-wrapper" ng-class="{'rotated': core.menuIsOpen}">
-            <div class="view-overlay" ng-class="{'lighten': core.menuIsOpen}" ng-click="core.menuIsOpen = false"></div>
+            <div class="view-overlay" ng-class="{'lighten': core.menuIsOpen}" ng-click="core.toggleMenu(false)"></div>
             <div class="ui-vv" ui-view ng-cloak></div>
         </div>
         <footer>
