@@ -20,8 +20,18 @@
                 templateUrl: 'app/home/home.html',
                 controller: 'home as vm'
             })
+            .state('about', {
+                url: '/about',
+                templateUrl: 'app/about/about.html',
+                // controller: 'about as vm'
+            })
+            .state('portfolio', {
+                url: '/portfolio',
+                templateUrl: 'app/portfolio/portfolio.html',
+                // controller: 'home as vm'
+            })
             .state('contact', {
-                url: '',
+                url: '/contact',
                 templateUrl: 'app/contact/contact.html',
                 controller: 'contact as vm'
             })

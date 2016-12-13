@@ -20,6 +20,9 @@
         }
 
         function toggleMenu() {
+            var top = $('body').scrollTop();
+            $('body').scrollTop(0);
+            $('.ui-vv').css({marginTop: -top});
             core.menuIsOpen = !core.menuIsOpen;
         }
     }
