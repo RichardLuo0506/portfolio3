@@ -43,7 +43,7 @@ body.fixed
 	opacity: 0
 
 	&.lighten
-		opacity: 0.5
+		opacity: 0.2
 		pointer-events: initial
 
 		&:hover
@@ -52,6 +52,7 @@ body.fixed
 
 .view-container
 	min-height: 100vh
+	background-color: white
 
 .menu-toggle
 	display: inline-block
@@ -75,12 +76,24 @@ body.fixed
 
 .menu-wrapper
 	position: fixed
-	background: $dark
+	background: url(/app/assets/img/lights.jpg) center center no-repeat
+	background-size: cover
 	top: 0
 	right: 0
 	bottom: 0
 	left: 0
 	z-index: -1
+
+	&:before
+		content: ""
+		background: -webkit-linear-gradient(135deg, #073e3e 0%, #10143e 100%)
+		background: linear-gradient(135deg, #073e3e 0%, #10143e 100%)
+		opacity: 0.7
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
 
 	&.visible
 		z-index: 0
@@ -96,15 +109,18 @@ body.fixed
 		transform-style: preserve-3d
 		left: 12.5%
 		font-size: 1em
+		padding-top: 104px
 
 		+media-sm
 			font-size: 1.5em
 			left: 20%
+			padding-top: 124px
 
 
 		+media-md-up
 			font-size: 2em
 			left: 20%
+			padding-top: 144px
 
 
 		.menu-link
@@ -118,9 +134,6 @@ body.fixed
 			color: #fff
 			-webkit-transform-style: preserve-3d
 			transform-style: preserve-3d
-
-			&.roboto
-				+roboto
 
 			$menu-delay: 40ms
 
@@ -153,6 +166,37 @@ body.fixed
 
 				&:hover
 					cursor: pointer
+
+			&.social-container
+				padding-top: 20px
+
+				+media-sm
+					padding-top: 40px
+
+
+				+media-md-up
+					padding-top: 60px
+
+
+				i
+					transition: 200ms $ease-natural
+					color: #6e88a9
+					font-size: 24px
+
+					+media-sm
+						font-size: 30px
+						padding-right: 3px
+
+
+					+media-md-up
+						font-size: 36px
+						padding-right: 6px
+
+				.social-link
+					margin-right: 8px
+
+					&:hover i
+						color: white
 
 footer
 	padding: 48px
