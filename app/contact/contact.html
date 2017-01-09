@@ -1,3 +1,11 @@
 <section class="contact-view view-container">
-   
+    <div class="mail-form" ng-form="mailForm">
+        <h1>SAY "HELLO"</h1>
+        <div class="line-one">
+            <input class="input-line left" type="text" ng-model="vm.fromName" placeholder="Your Name" required>
+            <input class="input-line right" type="email" ng-model="vm.fromEmail" placeholder="Your Email" required>
+        </div>
+        <textarea class="input-box" rows="7" ng-model="vm.body" placeholder="Your Message"></textarea>
+        <a class="send-btn" ng-click="vm.sendMail()" ng-disabled="mailForm.$invalid" required>{{vm.btnText}}</a>
+    </div>
 </section>

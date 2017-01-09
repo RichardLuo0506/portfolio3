@@ -867,6 +867,115 @@ h6 {
           letter-spacing: 1px;
           font-size: 68.5%; }
 
+.contact-view .mail-form {
+  padding: 100px 25px 25px; }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    .contact-view .mail-form {
+      padding: 100px 20% 25px; } }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    .contact-view .mail-form {
+      padding: 120px 20% 25px; } }
+  @media screen and (min-width: 1200px) and (max-width: 1599px) {
+    .contact-view .mail-form {
+      padding: 140px 20% 25px; } }
+  @media screen and (min-width: 1600px) {
+    .contact-view .mail-form {
+      padding: 160px 20% 25px; } }
+  .contact-view .mail-form h1 {
+    font-family: "Raleway", sans-serif;
+    color: #5886ee;
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding-bottom: 25px; }
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      .contact-view .mail-form h1 {
+        font-size: 70px; } }
+    @media screen and (min-width: 992px) {
+      .contact-view .mail-form h1 {
+        font-size: 80px; } }
+  .contact-view .mail-form .line-one {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between; }
+  .contact-view .mail-form .input-line {
+    background-color: white;
+    color: rgba(0, 0, 0, 0.8);
+    border-radius: 2px;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.12);
+    border-style: solid;
+    transition: 200ms cubic-bezier(0.4, 0, 0.2, 1) box-shadow, 200ms cubic-bezier(0.4, 0, 0.2, 1) border-color;
+    padding: 5px 8px;
+    resize: none;
+    font-weight: 600;
+    flex: 0 0 100%;
+    font-size: 24px;
+    padding: 10px 15px;
+    margin-bottom: 30px;
+    color: rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+    min-width: 0; }
+    .contact-view .mail-form .input-line:focus {
+      outline: none;
+      border-color: #03A9F4;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(3, 169, 244, 0.4), 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+    @media screen and (min-width: 768px) {
+      .contact-view .mail-form .input-line {
+        flex: 0 0 calc(50% - 15px); } }
+  .contact-view .mail-form .input-box {
+    background-color: white;
+    color: rgba(0, 0, 0, 0.8);
+    border-radius: 2px;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.12);
+    border-style: solid;
+    transition: 200ms cubic-bezier(0.4, 0, 0.2, 1) box-shadow, 200ms cubic-bezier(0.4, 0, 0.2, 1) border-color;
+    padding: 5px 8px;
+    resize: none;
+    font-weight: 600;
+    width: 100%;
+    font-size: 14px;
+    padding: 10px 15px;
+    margin-bottom: 30px;
+    color: rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+    line-height: 1.6; }
+    .contact-view .mail-form .input-box:focus {
+      outline: none;
+      border-color: #03A9F4;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(3, 169, 244, 0.4), 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+  .contact-view .mail-form .send-btn {
+    background-color: #5886ee;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    display: inline-flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    padding: 5px 10px;
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 20px; }
+    .contact-view .mail-form .send-btn:hover {
+      background-color: #4f79d6;
+      cursor: pointer; }
+    .contact-view .mail-form .send-btn:active {
+      background-color: #547fe2;
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.24), inset 0 1px 2px rgba(0, 0, 0, 0.36); }
+    .contact-view .mail-form .send-btn[disabled] {
+      pointer-events: none;
+      background-color: #82a4f2;
+      opacity: 0.8; }
+    @media screen and (min-width: 768px) {
+      .contact-view .mail-form .send-btn {
+        width: 250px; } }
+
 html, body {
   font-family: "Roboto", sans-serif;
   height: 100%;
@@ -1047,8 +1156,12 @@ footer {
   footer .copyright {
     font-weight: 300;
     font-size: 14px; }
-  footer .social i {
+  footer .social a {
     font-size: 24px;
-    padding-left: 15px; }
+    color: #eee8d4;
+    padding-left: 15px;
+    transition: 200ms cubic-bezier(0.4, 0, 0.2, 1); }
+    footer .social a:hover {
+      color: #ffc400; }
 
 /*# sourceMappingURL=app.css.map */

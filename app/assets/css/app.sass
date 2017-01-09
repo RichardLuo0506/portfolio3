@@ -4,6 +4,7 @@
 @import home
 @import about
 @import portfolio
+@import contact
 
 html, body
 	+roboto
@@ -216,6 +217,11 @@ footer
 		font-weight: 300
 		font-size: 14px
 
-	.social i
+	.social a
 		font-size: 24px
+		color: $beige
 		padding-left: 15px
+		transition: 200ms $ease-natural
+
+		&:hover
+			color: #ffc400

@@ -1,0 +1,80 @@
+.contact-view
+	.mail-form
+		padding: 100px 25px 25px
+
+		+media-sm
+			padding: 100px 20% 25px
+
+
+		+media-md
+			padding: 120px 20% 25px
+
+
+		+media-lg
+			padding: 140px 20% 25px
+
+
+		+media-xl
+			padding: 160px 20% 25px
+
+
+		h1
+			+raleway
+
+			color: #5886ee
+			font-size: 40px
+			font-weight: 800
+			letter-spacing: 1px
+			padding-bottom: 25px
+
+			+media-sm
+				font-size: 70px
+
+
+			+media-md-up
+				font-size: 80px
+
+		.line-one
+			flex-wrap: wrap
+			display: flex
+			justify-content: space-between
+
+		.input-line
+			+fg-input
+
+			font-weight: 600
+			flex: 0 0 100%
+			font-size: 24px
+			padding: 10px 15px
+			margin-bottom: 30px
+			color: rgba(0, 0, 0, 0.5)
+			letter-spacing: 1px
+			min-width: 0
+
+			+media-sm-up
+				flex: 0 0 calc(50% - 15px)
+
+		.input-box
+			+fg-input
+
+			font-weight: 600
+			width: 100%
+			font-size: 14px
+			padding: 10px 15px
+			margin-bottom: 30px
+			color: rgba(0, 0, 0, 0.5)
+			letter-spacing: 1px
+			line-height: 1.6
+
+		.send-btn
+			+fg-btn((background-color: #5886ee, color: white))
+
+			width: 100%
+			text-align: center
+			font-size: 18px
+			font-weight: 600
+			letter-spacing: 1px
+			padding: 20px
+
+			+media-sm-up
+				width: 250px
