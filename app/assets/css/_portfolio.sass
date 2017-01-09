@@ -1,38 +1,76 @@
 .portfolio-view
+	background-color: #34495e !important
+
 	.portfolio-heading
-		background-color: white
-		padding: 64px 48px
-		font-size: 32px
-		font-weight: 300
-		text-align: center
-		color: $text
+		+roboto
+
+		background-color: #fafafa
+		padding: 150px 25px 40px
+		font-size: 36px
+		color: #34495e
+		letter-spacing: 1px
+		position: relative
+
+		span
+			vertical-align: top
+			font-size: 20px
+			color: $subtext
+
+			+media-xs
+				display: none
+
+
+			+media-md-up
+				position: absolute
+				left: calc(50% + 190px)
+
 		+media-sm
-			font-size: 48px
-			font-weight: 200
-		+media-md
 			font-size: 60px
-			font-weight: 100
+			padding: 200px 96px 60px
+
+
+		+media-md-up
+			font-size: 60px
+			padding: 200px 96px 60px
+			text-align: center
+
 
 		+media-lg-up
 			font-size: 72px
-			font-weight: 100
+			padding: 200px 96px 60px
+			font-weight: 500
+
 	.projects
 		display: flex
 		flex-wrap: wrap
+
+		+media-sm-up
+			padding: 48px 0
+
+
 		figure
 			flex: 0 0 100%
 			position: relative
 			float: left
 			overflow: hidden
 			margin: 0
-			background: -webkit-linear-gradient(45deg, #ff89e9 0%, #05abe0 100%)
-			background: linear-gradient(45deg, #ff89e9 0%,#05abe0 100%)
+			background: -webkit-linear-gradient(45deg, #c50c9d 0%, #05a1e6 100%)
+			background: linear-gradient(45deg, #c50c9d 0%, #05a1e6 100%)
 			text-align: center
+
+			&.figure2
+				background: -webkit-linear-gradient(45deg, #c5dc00 0%, #f11e63 100%)
+				background: linear-gradient(45deg, #c5dc00 0%, #f11e63 100%)
+
+			&.figure3
+				background: -webkit-linear-gradient(45deg, #4CAF50 0%, #03A9F4 100%)
+				background: linear-gradient(45deg, #4CAF50 0%, #03A9F4 100%)
 
 			&:hover
 				cursor: pointer
+
 				img
-					opacity: 0.4
+					opacity: 0.25
 
 				figcaption:before, figcaption:after
 					opacity: 1
@@ -41,21 +79,30 @@
 
 				p
 					opacity: 1
-					-webkit-transform: translate3d(0,0,0)
-					transform: translate3d(0,0,0)
-			+media-sm
-				flex: 50%
+					-webkit-transform: translate3d(0, 0, 0)
+					transform: translate3d(0, 0, 0)
+
+			+media-sm-up
+				box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23)
+				margin: 48px 96px
+				flex: 100%
+
+
 			+media-md-up
-				flex: 0 0 33.33333333%
+				margin: 48px 25%
+				flex: 100%
+
+
 			img
 				width: 100%
 				position: relative
 				display: block
 				min-height: 100%
 				max-width: 100%
-				opacity: 0.8
+				opacity: 0.75
 				-webkit-transition: opacity 350ms
 				transition: opacity 350ms
+
 			figcaption
 				padding: 2em
 				color: #fff
@@ -68,36 +115,39 @@
 				left: 0
 				width: 100%
 				height: 100%
+
 				&:before
 					position: absolute
 					top: 30px
 					right: 30px
 					bottom: 30px
 					left: 30px
-					content: ''
+					content: ""
 					opacity: 0
 					-webkit-transition: opacity 0.35s, -webkit-transform 0.35s
 					transition: opacity 0.35s, transform 0.35s
 					border-top: 1px solid #fff
 					border-bottom: 1px solid #fff
-					-webkit-transform: scale(0,1)
-					transform: scale(0,1)
+					-webkit-transform: scale(0, 1)
+					transform: scale(0, 1)
 					pointer-events: none
+
 				&:after
 					position: absolute
 					top: 30px
 					right: 30px
 					bottom: 30px
 					left: 30px
-					content: ''
+					content: ""
 					opacity: 0
 					-webkit-transition: opacity 0.35s, -webkit-transform 0.35s
 					transition: opacity 0.35s, transform 0.35s
 					border-left: 1px solid #fff
 					border-right: 1px solid #fff
-					-webkit-transform: scale(0,1)
-					transform: scale(1,0)
+					-webkit-transform: scale(0, 1)
+					transform: scale(1, 0)
 					pointer-events: none
+
 				h2
 					margin: 0
 					word-spacing: -0.15em
@@ -105,17 +155,26 @@
 					padding-top: 30%
 					-webkit-transition: -webkit-transform 0.35s
 					transition: transform 0.35s
-					-webkit-transform: translate3d(0,-20px,0)
-					transform: translate3d(0,-20px,0)
+					-webkit-transform: translate3d(0, -20px, 0)
+					transform: translate3d(0, -20px, 0)
 					color: white
+
 					span
 						font-weight: 800
+
+					+media-xs
+						font-size: 24px
+
+
+					+media-md
+						font-size: 24px
+
 				p
 					padding: 20px 2.5em
 					opacity: 0
 					-webkit-transition: opacity 0.35s, -webkit-transform 0.35s
 					transition: opacity 0.35s, transform 0.35s
-					-webkit-transform: translate3d(0,20px,0)
-					transform: translate3d(0,20px,0)
+					-webkit-transform: translate3d(0, 20px, 0)
+					transform: translate3d(0, 20px, 0)
 					letter-spacing: 1px
 					font-size: 68.5%

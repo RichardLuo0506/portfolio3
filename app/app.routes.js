@@ -30,6 +30,10 @@
                 templateUrl: 'app/portfolio/portfolio.html',
                 // controller: 'home as vm'
             })
+            .state('listManager', {
+                url: "/portfolio/list-manager",
+                templateUrl: 'app/portfolio/list-manager.html',
+            })
             .state('contact', {
                 url: '/contact',
                 templateUrl: 'app/contact/contact.html',

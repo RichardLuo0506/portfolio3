@@ -10,15 +10,15 @@
     <!-- <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" /> -->
 </head>
 
-<body ng-app="App" ng-controller="core as core" ng-class="{'fixed': core.menuIsOpen}">
-    <div class="core" ng-controller="core">
-        <div class="menu-toggle" ng-click="core.toggleMenu(true)" ng-class="{'invis': core.menuIsOpen}"><i class="material-icons">menu</i></div>
+<body ng-app="App" ng-controller="core as core" ng-class="{'fixed': core.menuIsOpen}" ng-cloak>
+    <div class="core" ng-controller="core" data-sr-container='{ "reset":true, "vFactor": 0.2 }'>
+        <div class="menu-toggle" ng-click="core.toggleMenu('menu')" ng-class="{'invis': core.menuIsOpen}"><i class="material-icons">menu</i></div>
         <div class="menu-wrapper" ng-class="{'visible': core.menuIsOpen}">
             <nav class="menu-container">
-                <div class="menu-link" ng-click="core.toggleMenu(false)" ui-sref="home" ng-class="{'visible': core.menuIsOpen}">Home</div>
-                <div class="menu-link" ng-click="core.toggleMenu(false)" ui-sref="about" ng-class="{'visible': core.menuIsOpen}">About</div>
-                <div class="menu-link" ng-click="core.toggleMenu(false)" ui-sref="portfolio" ng-class="{'visible': core.menuIsOpen}">Portfolio</div>
-                <div class="menu-link" ng-click="core.toggleMenu(false)" ui-sref="contact" ng-class="{'visible': core.menuIsOpen}">Contact</div>
+                <div class="menu-link" ng-click="core.toggleMenu('link')" ui-sref="home" ng-class="{'visible': core.menuIsOpen}">Home</div>
+                <div class="menu-link" ng-click="core.toggleMenu('link')" ui-sref="about" ng-class="{'visible': core.menuIsOpen}">About</div>
+                <div class="menu-link" ng-click="core.toggleMenu('link')" ui-sref="portfolio" ng-class="{'visible': core.menuIsOpen}">Portfolio</div>
+                <div class="menu-link" ng-click="core.toggleMenu('link')" ui-sref="contact" ng-class="{'visible': core.menuIsOpen}">Contact</div>
                 <div class="menu-link social-container" ng-class="{'visible': core.menuIsOpen}">
                     <a href="#" target="_blank" class="social-link">
                         <i class="fa fa-github"></i>
@@ -32,13 +32,13 @@
         <nav class="alt"></nav>
         <div class="decoration"></div>
         <div class="view-wrapper" ng-class="{'rotated': core.menuIsOpen}">
-            <div class="view-overlay" ng-class="{'lighten': core.menuIsOpen}" ng-click="core.toggleMenu(false)"></div>
+            <div class="view-overlay" ng-class="{'lighten': core.menuIsOpen}" ng-click="core.toggleMenu('view')"></div>
             <div class="ui-vv" ui-view ng-cloak></div>
-        </div>
         <footer>
             <div class="copyright">© 2016. Richard Luo</div>
             <div class="social"><i class="fa fa-github"></i><i class="fa fa-linkedin"></i></div>
         </footer>
+        </div>
     </div>
     <!-- Dependencies -->
     <!-- jQuery -->
@@ -49,8 +49,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
     <!-- ngAnimate -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular-animate.min.js"></script>
+    <!-- foxAngular scrollReveal -->
+    <script src="/bower_components/scrollreveal/dist/scrollReveal.min.js"></script>
+    <script src="/bower_components/fox-angular-scrollReveal.js/dist/fox-angular-scrollReveal.min.js"></script>
     <!-- Main App -->
     <script src="/app/app.module.js"></script>
+    <script src="/app/app.run.js"></script>
     <script src="/app/app.routes.js"></script>
     <script src="/app/core.controller.js"></script>
     <script src="/app/home/home.controller.js"></script>

@@ -3,5 +3,5 @@
     // Include app dependency on ngMaterial 
 
     angular
-        .module('App', ['ui.router']);
+        .module('App', ['ui.router','fox.scrollReveal']);
 })();

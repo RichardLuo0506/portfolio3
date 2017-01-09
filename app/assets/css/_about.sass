@@ -1,0 +1,82 @@
+.about-view
+	.about-heading
+		@extend .flex-xy
+
+		height: 95vh
+		background: url(/app/assets/img/me.jpg) center center no-repeat
+		background-size: cover
+		position: relative
+		padding: 25px
+
+		&:before
+			content: ""
+			background-color: #223b70
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			opacity: 0.7
+
+		.name
+			z-index: 1
+			text-align: center
+
+		h4
+			+openSans
+
+			color: white
+			padding-bottom: 10px
+			font-style: italic
+
+		h1
+			font-family: "bebas"
+			color: white
+			font-size: 44px
+
+		h3
+			color: white
+			font-size: 10px
+			margin-top: 20px
+
+	.paragraph
+		background-color: #edeeef
+		padding: 40px 25px
+
+		+media-sm
+			padding: 60px 15%
+
+
+		+media-md
+			padding: 80px 25%
+
+
+		+media-lg-up
+			padding: 100px 25%
+
+
+		h1
+			+roboto
+
+			text-align: center
+			font-size: 24px
+			font-weight: 300
+			margin-bottom: 30px
+
+		p
+			+openSans
+
+			margin-top: 15px
+			color: rgba(34, 36, 49, 0.68)
+			font-weight: 300
+			line-height: 30px
+
+		a
+			color: #5886ee
+			transition: 200ms $ease-natural
+
+			&:hover
+				color: $md-red
+
+		&.more
+			background-color: white

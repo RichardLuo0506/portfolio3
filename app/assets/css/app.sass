@@ -2,6 +2,7 @@
 @import config
 @import nav
 @import home
+@import about
 @import portfolio
 
 html, body
@@ -18,12 +19,13 @@ body.fixed
 	position: relative
 
 .view-wrapper
-	transition: 500ms $ease-natural
+	transition: 1000ms $ease-natural
 	-webkit-transform: perspective(0) translateZ(0) rotateY(0) translateX(0)
 	transform: perspective(0) translateZ(0) rotateY(0) translateX(0)
 
 .rotated
 	height: 100vh
+	transition: 500ms $ease-natural
 	overflow: hidden
 	-webkit-transform: perspective(1800px) translateZ(-1300px) rotateY(-35deg) translateX(-20%)
 	transform: perspective(1800px) translateZ(-1300px) rotateY(-35deg) translateX(-20%)
@@ -199,12 +201,16 @@ body.fixed
 						color: white
 
 footer
-	padding: 48px
+	padding: 40px 25px
 	background-color: $dark
 	color: $beige
 	display: flex
 	justify-content: space-between
 	align-items: center
+
+	+media-sm-up
+		padding: 48px
+
 
 	.copyright
 		font-weight: 300
