@@ -23,7 +23,7 @@
             .state('about', {
                 url: '/about',
                 templateUrl: 'app/about/about.html',
-                // controller: 'about as vm'
+                controller: 'about as vm'
             })
             .state('portfolio', {
                 url: '/portfolio',

@@ -218,3 +218,171 @@
 
 				+media-lg-up
 					margin-bottom: 80px
+
+	.projects
+		display: flex
+		flex-wrap: wrap
+
+		.portfolio-heading-container
+			@extend .flex-xy
+
+			width: 100%
+			background-color: #4060ae
+
+			+media-sm-up
+				width: 50%
+
+
+			.portfolio-heading
+				+roboto
+
+				font-size: 36px
+				color: white
+				letter-spacing: 1px
+				position: relative
+				width: 100%
+				text-align: center
+				margin-left: 25px
+				padding: 120px 0
+
+				+media-md
+					font-size: 42px
+
+
+				+media-lg-up
+					font-size: 50px
+
+
+				span
+					vertical-align: top
+					font-size: 20px
+					color: #7fa4ff
+
+		figure
+			flex: 0 0 100%
+			position: relative
+			float: left
+			overflow: hidden
+			margin: 0
+			background: -webkit-linear-gradient(45deg, #c50c9d 0%, #05a1e6 100%)
+			background: linear-gradient(45deg, #c50c9d 0%, #05a1e6 100%)
+			text-align: center
+
+			&.figure2
+				background: -webkit-linear-gradient(45deg, #c5dc00 0%, #f11e63 100%)
+				background: linear-gradient(45deg, #c5dc00 0%, #f11e63 100%)
+
+			&.figure3
+				background: -webkit-linear-gradient(45deg, #4CAF50 0%, #03A9F4 100%)
+				background: linear-gradient(45deg, #4CAF50 0%, #03A9F4 100%)
+
+			&:hover
+				cursor: pointer
+
+				img
+					opacity: 0.25
+
+				figcaption:before, figcaption:after
+					opacity: 1
+					-webkit-transform: scale(1)
+					transform: scale(1)
+
+				p
+					opacity: 1
+					color: white
+					-webkit-transform: translate3d(0, 0, 0)
+					transform: translate3d(0, 0, 0)
+
+			+media-sm-up
+				flex: 50%
+
+
+			img
+				width: 100%
+				position: relative
+				display: block
+				min-height: 100%
+				max-width: 100%
+				opacity: 0.75
+				-webkit-transition: opacity 350ms
+				transition: opacity 350ms
+
+			figcaption
+				padding: 2em
+				color: #fff
+				text-transform: uppercase
+				font-size: 1.25em
+				-webkit-backface-visibility: hidden
+				backface-visibility: hidden
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+
+				&:before
+					position: absolute
+					top: 30px
+					right: 30px
+					bottom: 30px
+					left: 30px
+					content: ""
+					opacity: 0
+					-webkit-transition: opacity 0.35s, -webkit-transform 0.35s
+					transition: opacity 0.35s, transform 0.35s
+					border-top: 1px solid #fff
+					border-bottom: 1px solid #fff
+					-webkit-transform: scale(0, 1)
+					transform: scale(0, 1)
+					pointer-events: none
+
+				&:after
+					position: absolute
+					top: 30px
+					right: 30px
+					bottom: 30px
+					left: 30px
+					content: ""
+					opacity: 0
+					-webkit-transition: opacity 0.35s, -webkit-transform 0.35s
+					transition: opacity 0.35s, transform 0.35s
+					border-left: 1px solid #fff
+					border-right: 1px solid #fff
+					-webkit-transform: scale(0, 1)
+					transform: scale(1, 0)
+					pointer-events: none
+
+				h2
+					margin: 0
+					word-spacing: -0.15em
+					font-weight: 300
+					padding-top: 30%
+					-webkit-transition: -webkit-transform 0.35s
+					transition: transform 0.35s
+					-webkit-transform: translate3d(0, -20px, 0)
+					transform: translate3d(0, -20px, 0)
+					color: white
+
+					span
+						font-weight: 800
+
+					+media-xs
+						font-size: 24px
+
+
+					+media-sm
+						font-size: 18px
+
+
+					+media-md
+						font-size: 22px
+
+				p
+					padding: 10px 2.5em
+					opacity: 0
+					-webkit-transition: opacity 0.35s, -webkit-transform 0.35s
+					transition: opacity 0.35s, transform 0.35s
+					-webkit-transform: translate3d(0, 20px, 0)
+					transform: translate3d(0, 20px, 0)
+					letter-spacing: 1px
+					font-size: 68.5%

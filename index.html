@@ -11,7 +11,7 @@
 </head>
 
 <body ng-app="App" ng-controller="core as core" ng-class="{'fixed': core.menuIsOpen}" ng-cloak>
-    <div class="core" ng-controller="core" data-sr-container='{ "reset":true, "vFactor": 0.2 }'>
+    <div class="core" ng-controller="core">
         <div class="menu-toggle" ng-click="core.toggleMenu('menu')" ng-class="{'invis': core.menuIsOpen}"><i class="material-icons">menu</i></div>
         <div class="menu-wrapper" ng-class="{'visible': core.menuIsOpen}">
             <nav class="menu-container">
@@ -44,11 +44,18 @@
         </div>
     </div>
     <!-- Dependencies -->
+    <!-- scrollReveal -->
+    <script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
     <!-- EmailJS -->
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
     (function() {
         emailjs.init("user_EWYcOOxNiNYIfXO8NoEuQ");
+        window.sr = ScrollReveal({
+            reset: true,
+            mobile: false,
+            viewFactor: 0.2
+        });
     })();
     </script>
     <!-- jQuery -->
@@ -59,8 +66,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
     <!-- ngAnimate -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular-animate.min.js"></script>
-    <!-- foxAngular scrollReveal -->
-    <script src="/bower_components/scrollreveal/dist/scrollReveal.min.js"></script>
     <script src="/bower_components/fox-angular-scrollReveal.js/dist/fox-angular-scrollReveal.min.js"></script>
     <!-- Main App -->
     <script src="/app/app.module.js"></script>
@@ -68,6 +73,7 @@
     <script src="/app/app.routes.js"></script>
     <script src="/app/core.controller.js"></script>
     <script src="/app/home/home.controller.js"></script>
+    <script src="/app/about/about.controller.js"></script>
     <script src="/app/contact/contact.controller.js"></script>
     <!-- uiSmoothScrool -->
     <script src="/vendor/smooth-scroll.directive.js"></script>
